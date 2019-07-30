@@ -19,6 +19,9 @@ BuildArch: noarch
 BuildRoot: %(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
 
 Requires: rrdtool
+Requires: gd
+Requires: perl-open
+Requires: perl-Proc-Queue
 Requires: sysstat
 Requires: httpd
 Requires: perl(:MODULE_COMPAT_%(eval "`%{__perl} -V:version`"; echo $version))
